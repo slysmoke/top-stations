@@ -10,8 +10,7 @@ RUN apk update && \
 COPY . /go/src/github.com/EVE-Tools/top-stations
 
 WORKDIR /go/src/github.com/EVE-Tools/top-stations
-RUN go mod init github.com/EVE-Tools/
-RUN go get github.com/go-redis/redis/v8
+RUN go mod init github.com/slysmoke/
 RUN go get go.opentelemetry.io/otel/label
 RUN go get -d -v ./...
 RUN go build
